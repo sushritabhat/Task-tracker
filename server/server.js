@@ -66,7 +66,7 @@ app.get("/health/ready", async (req, res) => {
 });
 
 app.use("/api/auth", (req, res, next) => {
-    if (!req.path.match(/^\/(login|register)$/)) return next();
+    if (!/^\/(login|register)$/.test(req.path)) return next();
     const key = `${req.ip}:${req.path}`;
     const now = Date.now();
     const current = authAttempts.get(key);
