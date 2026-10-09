@@ -45,3 +45,5 @@ Authentication uses an HttpOnly session cookie. The browser stores only the non-
 ## Deployment notes
 
 Build and deploy `client/dist` to a static host, run the API with `npm start`, and connect both to a production MongoDB database. Configure the static host to route `/api/*` and `/health/*` to the API, or set `VITE_API_BASE_URL` before building when deploying the services separately. Use HTTPS, restrict database network access, and keep all `.env` files out of version control.
+
+web link:https://task-tracker-ten-rust.vercel.app/
